@@ -40,11 +40,11 @@ public class Theatre {
         ballet.printAllActors();
         System.out.println();
 
-        opera.replaceActor(actor1, actor2);
+        opera.replaceActor("Vas", actor2);
         opera.printAllActors();
         System.out.println();
 
-        musicalShow.replaceActor(actor3, actor1);
+        musicalShow.replaceActor("Swon", actor1);
         System.out.println();
         System.out.println(opera.getLibrettoText());
         System.out.println(ballet.getLibrettoText());

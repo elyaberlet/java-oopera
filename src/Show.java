@@ -13,24 +13,8 @@ public class Show {
         this.listOfActors = listOfActors;
     }
 
-    public int getDuration() {
-        return duration;
-    }
-
-    public Director getDirector() {
-        return director;
-    }
-
-    public void setListOfActors(ArrayList<Actor> listOfActors) {
-        this.listOfActors = listOfActors;
-    }
-
     public ArrayList<Actor> getListOfActors() {
         return listOfActors;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     public void printAllActors() {
@@ -48,13 +32,15 @@ public class Show {
         }
     }
 
-    public void replaceActor(Actor oldActor, Actor newActor) {
-        if (listOfActors.contains(oldActor)) {
-            listOfActors.remove(oldActor);
-            listOfActors.add(newActor);
-            System.out.println("Актер заменен");
-        } else {
-            System.out.println("Актер не найден в списке");
+    public void replaceActor(String surname, Actor newActor) {
+        for (int i = 0; i < listOfActors.size(); i++) {
+            if (listOfActors.get(i).getSurname().equals(surname)) {
+                listOfActors.set(i, newActor);
+                System.out.println("Актер заменен");
+                break;
+            } else {
+                System.out.println("Актер не найден");
+            }
         }
     }
 }
